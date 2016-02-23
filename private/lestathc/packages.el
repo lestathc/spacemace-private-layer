@@ -2,12 +2,12 @@
 ;;
 ;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
 ;;
-;; Author: Cong Hui <lestathc@lestathc-macbookpro.roam.corp.google.com>
-;; URL: https://github.com/syl20bnr/spacemacs
+;; Author: Cong Hui
+;; URL: https://github.com/lestathc/spacemace-private-layer
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
-;;; License: GPLv3
+;;; License: MIT
 
 ;;; Commentary:
 
