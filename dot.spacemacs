@@ -241,14 +241,15 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
-  ;; (setq mac-option-modifier 'meta)
-  ;; (setq mac-command-modifier 'super)
   )
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+
+  ;; Enable linum globally
+  (global-linum-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
