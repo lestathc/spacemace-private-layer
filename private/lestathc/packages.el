@@ -30,7 +30,27 @@
 ;;; Code:
 
 (defconst lestathc-packages
-  '())
+  '(
+    auto-yasnippet
+    yasnippet
+    ))
 
+
+;; >>>>>>>> auto-yasnippet <<<<<<<<
+
+(defun lestathc/post-init-auto-yasnippet ()
+  (setq aya-persist-snippets-dir (concat user-emacs-directory "private/snippets/"))
+  )
+
+;; <<<<<<<< auto-yasnippet >>>>>>>>
+
+;; >>>>>>>> yasnippet <<<<<<<<
+
+(defun lestathc/post-init-auto-yasnippet ()
+  (with-eval-after-load 'yasnippet
+    (add-to-list 'yas-snippet-dirs (concat user-emacs-directory "private/snippets/")))
+  )
+
+;; <<<<<<<< yasnippet >>>>>>>>
 
 ;;; Packages.El Ends here
