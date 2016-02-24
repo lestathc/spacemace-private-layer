@@ -24,22 +24,37 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
 
-     ;; Auto complete with snippets
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t)
-     ;; better-defaults
+     better-defaults
+     (colors :variables
+             colors-enable-rainbow-identifiers t)
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
      emacs-lisp
      git
-     ;; markdown
-     ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     github
+     html
+     (ibuffer :variables ibuffer-group-buffers-by 'projects)
+     java
+     javascript
+     markdown
+     org
+     perforce
+     python
+     rust
+     semantic
+     (shell :variables
+            shell-default-shell 'eshell
+            shell-default-term-shell "/bin/bash"
+            shell-default-height 30
+            shell-default-position 'bottom)
      spell-checking
+     sql
      syntax-checking
-     ;; version-control
+     swift
 
-     ;; ----------- My layer
      lestathc
      )
    ;; List of additional packages that will be installed without being
@@ -74,7 +89,9 @@ values."
    dotspacemacs-elpa-timeout 5
    ;; If non nil then spacemacs will check for updates at startup
    ;; when the current branch is not `develop'. (default t)
-   dotspacemacs-check-for-update t
+   ;;
+   ;; NOTE(lestathc): disable the check for udpate, I will update it manually.
+   dotspacemacs-check-for-update nil
    ;; One of `vim', `emacs' or `hybrid'. Evil is always enabled but if the
    ;; variable is `emacs' then the `holy-mode' is enabled at startup. `hybrid'
    ;; uses emacs key bindings for vim's insert mode, but otherwise leaves evil
@@ -95,9 +112,11 @@ values."
    dotspacemacs-startup-lists '(recents projects)
    ;; Number of recent files to show in the startup buffer. Ignored if
    ;; `dotspacemacs-startup-lists' doesn't include `recents'. (default 5)
-   dotspacemacs-startup-recent-list-size 5
+   dotspacemacs-startup-recent-list-size 10
    ;; Default major mode of the scratch buffer (default `text-mode')
-   dotspacemacs-scratch-mode 'text-mode
+   ;;
+   ;; NOTE(lestathc): change it to emacs-lisp-mode
+   dotspacemacs-scratch-mode 'emacs-lisp-mode
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
@@ -236,7 +255,9 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   ;;
+   ;; NOTE(lestathc): change to trailing
+   dotspacemacs-whitespace-cleanup `trailing
    ))
 
 (defun dotspacemacs/user-init ()
