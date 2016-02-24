@@ -34,7 +34,6 @@ values."
             c-c++-enable-clang-support t)
      emacs-lisp
      git
-     github
      html
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      java
