@@ -41,9 +41,11 @@ values."
      markdown
      org
      perforce
-     python
+     ;; NOTE(lestathc): an error occurs for this mode
+     ;; python
      rust
-     semantic
+     ;; NOTE(lestathc): it is too slow
+     ;; semantic
      (shell :variables
             shell-default-shell 'eshell
             shell-default-term-shell "/bin/bash"
