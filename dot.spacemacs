@@ -27,8 +27,8 @@ values."
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t)
      better-defaults
-     (colors :variables
-             colors-enable-rainbow-identifiers t)
+     ;; (colors :variables
+     ;;         colors-enable-rainbow-identifiers t)
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-support t)
