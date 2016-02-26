@@ -33,7 +33,10 @@
   '(
     auto-yasnippet
     yasnippet
-    ))
+
+    (local-conf :location local)
+    )
+  )
 
 
 ;; >>>>>>>> auto-yasnippet <<<<<<<<
@@ -52,5 +55,13 @@
   )
 
 ;; <<<<<<<< yasnippet >>>>>>>>
+
+;; >>>>>>>> local-conf <<<<<<<<
+
+(defun lestathc/init-local-conf ()
+  (require 'local-conf)
+  )
+
+;; <<<<<<<< local-conf >>>>>>>>
 
 ;;; Packages.El Ends here
