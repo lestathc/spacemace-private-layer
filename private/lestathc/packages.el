@@ -60,6 +60,10 @@
 
 (defun lestathc/init-local-conf ()
   (require 'local-conf)
+  (setq -local-conf-debug t)
+  (setq local-conf-load-parent t)
+  (add-hook 'find-file-hook
+            'local-conf--load-buffer-local-conf)
   )
 
 ;; <<<<<<<< local-conf >>>>>>>>
