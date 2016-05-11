@@ -32,6 +32,7 @@
 (defconst lestathc-packages
   '(
     auto-yasnippet
+    dart-mode
     yasnippet
 
     (local-conf :location local)
@@ -46,6 +47,19 @@
   )
 
 ;; <<<<<<<< auto-yasnippet >>>>>>>>
+
+;; >>>>>>>> dart-mode <<<<<<<<
+
+(defun lestathc/init-dart-mode ()
+  (require 'dart-mode)
+  )
+
+(defun lestathc/post-init-dart-mode ()
+  (setq dart-enable-analysis-server t)
+  (add-hook 'dart-mode-hook 'flycheck-mode)
+  )
+
+;; <<<<<<<< dart-mode >>>>>>>>
 
 ;; >>>>>>>> yasnippet <<<<<<<<
 
