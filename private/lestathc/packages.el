@@ -31,6 +31,7 @@
 
 (defconst lestathc-packages
   '(
+    angular-mode
     auto-yasnippet
     dart-mode
     yasnippet
@@ -39,6 +40,8 @@
     )
   )
 
+;; >>>>>>>> angular-mode <<<<<<<<
+;; <<<<<<<< angular-mode >>>>>>>>
 
 ;; >>>>>>>> auto-yasnippet <<<<<<<<
 
@@ -55,7 +58,7 @@
   )
 
 (defun lestathc/post-init-dart-mode ()
-  (setq dart-enable-analysis-server t)
+  (setq dart-enable-analysis-server nil)
   (add-hook 'dart-mode-hook 'flycheck-mode)
   )
 
