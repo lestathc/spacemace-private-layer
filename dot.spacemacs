@@ -37,7 +37,7 @@ values."
      html
      (ibuffer :variables ibuffer-group-buffers-by 'projects)
      java
-     javascript
+     (javascript :variables javascript-disable-tern-port-files nil)
      markdown
      org
      perforce
@@ -275,6 +275,10 @@ layers configuration. You are free to put any user code."
 
   ;; Enable linum globally
   (global-linum-mode)
+  ;; indents
+  (setq-default js2-bbasic-offset 2)
+  (setq-default js-indent-level 2)
+  (setq-default web-mode-markup-indent-offset 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -284,7 +288,15 @@ layers configuration. You are free to put any user code."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-)
+ '(default-frame-alist
+    (quote
+     ((height . 50)
+      (width . 190)
+      (menu-bar-lines . 14)
+      (tool-bar-lines . 0))))
+ '(package-selected-packages
+   (quote
+    (xterm-color web-mode web-beautify toml-mode tagedit swift-mode sql-indent smeargle slim-mode shell-pop scss-mode sass-mode racer pug-mode p4 orgit org-projectile org-present org org-pomodoro alert log4e gntp org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow livid-mode skewer-mode simple-httpd less-css-mode json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc ibuffer-projectile htmlize helm-gitignore helm-css-scss helm-company helm-c-yasnippet haml-mode gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md flyspell-correct-helm flyspell-correct flycheck-rust seq flycheck-pos-tip pos-tip evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help emmet-mode disaster dart-mode flycheck company-web web-completion-data company-tern dash-functional tern company-statistics company-emacs-eclim eclim company-c-headers company coffee-mode cmake-mode clang-format cargo rust-mode auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete solarized-theme ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spacemacs-theme spaceline restart-emacs request rainbow-delimiters quelpa popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
