@@ -12,3 +12,24 @@
                             (setq c-basic-offset 2
                                   tab-width 2
                                   indent-tabs-mode nil)))
+
+(add-hook 'javascript-mode-hook (lambda ()
+                                  (lestathc/-setup-web-development-indents 2)))
+(add-hook 'web-mode-hook (lambda ()
+                           (lestathc/-setup-web-development-indents 2)))
+
+(defun lestathc/-setup-web-development-indents (n)
+  (setq
+   indent-tabs-mode nil
+   ;; javascript
+   javascript-indent-level n
+   js2-basic-offset n
+   js-indent-level n
+   react-mode-offset n
+   ;; web
+   css-indent-offset n
+   web-mode-markup-indent-offset n
+   web-mode-css-indent-offset n
+   web-mode-code-indent-offset n
+   web-mode-attr-indent-offset n)
+  )
