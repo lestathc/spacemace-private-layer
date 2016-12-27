@@ -18,9 +18,14 @@
 (add-hook 'web-mode-hook (lambda ()
                            (lestathc/-setup-web-development-indents 2)))
 
+(add-hook 'json-mode-hook (lambda ()
+                            (make-local-variable 'js-indent-level)
+                            (setq js-indent-level 2)))
+
 (defun lestathc/-setup-web-development-indents (n)
   (setq
    indent-tabs-mode nil
+   tab-width 2
    ;; javascript
    javascript-indent-level n
    js2-basic-offset n
