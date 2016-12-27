@@ -13,6 +13,10 @@
                                   tab-width 2
                                   indent-tabs-mode nil)))
 
+(add-hook 'js-mode-hook (lambda ()
+                                  (lestathc/-setup-web-development-indents 2)))
+(add-hook 'js2-mode-hook (lambda ()
+                                  (lestathc/-setup-web-development-indents 2)))
 (add-hook 'javascript-mode-hook (lambda ()
                                   (lestathc/-setup-web-development-indents 2)))
 (add-hook 'web-mode-hook (lambda ()
